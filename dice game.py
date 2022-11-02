@@ -4,20 +4,27 @@ import random
 
 print('Lets play a fun dice game!!!')
 var1 = input('Press enter to start...')
+print("Numbers should be between 1 and 100")
+time.sleep(3)
 while True:
 
     lucky1 = int(input("Player 1's lucky number 1:"))
-    lucky1_2 = int(input("Player 1's lucky number 2:"))
-    pen1 = int(input("Player 1's penalty number 1:"))
-    pen1_2 = int(input("Player 1's penalty number 2:"))
-    if (0 < lucky1 < 100) and (0 < lucky1_2 < 100) and (0 < pen1 < 100) and (0 < pen1_2 < 100):
-
-        lucky2 = int(input("Player 2's lucky number 1:"))
-        lucky2_2 = int(input("Player 2's lucky number 2:"))
-        pen2 = int(input("Player 2's penalty number 1:"))
-        pen2_2 = int(input("Player 2's penalty number 2:"))
-        if (0 < lucky2 < 100) and (0 < lucky2_2 < 100) and (0 < pen2 < 100) and (0 < pen2_2 < 100):
-            break
+    if (0 < lucky1 < 100):
+        lucky1_2 = int(input("Player 1's lucky number 2:"))
+        if (0 < lucky1_2 < 100):
+            pen1 = int(input("Player 1's penalty number 1:"))
+            if (0 < pen1 < 100):
+                pen1_2 = int(input("Player 1's penalty number 2:"))
+                if (0 < pen1_2 < 100):
+                    lucky2 = int(input("Player 2's lucky number 1:"))
+                    if (0 < lucky2 < 100):
+                        lucky2_2 = int(input("Player 2's lucky number 2:"))
+                        if (0 < lucky2_2 < 100):
+                            pen2 = int(input("Player 2's penalty number 1:"))
+                            if (0 < pen2 < 100):
+                                pen2_2 = int(input("Player 2's penalty number 2:"))
+                                if (0 < pen2_2 < 100):
+                                    break
 
 player1 = 1
 player2 = 1
